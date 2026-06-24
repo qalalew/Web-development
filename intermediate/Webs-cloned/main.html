@@ -1,0 +1,807 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Festmore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+
+<nav class="nav">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true"/>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><strong>Fest</strong>more</a>
+    <form class="nav-search" action="/events" method="GET">
+      <span style="color:rgba(255,255,255,.3);font-size:13px;">🔍</span>
+      <input type="text" name="q" placeholder="Search events, vendors, artists…"/>
+    </form>
+    <div class="nav-links">
+      <a href="#" class="nav-link">Events</a>
+      <a href="/vendors" class="nav-link">Vendors</a>
+      <a href="/artists" class="nav-link">Artists</a>
+      <a href="/articles" class="nav-link">Articles</a>
+      <details class="lang-switcher">
+  <summary class="lang-current" aria-label="Change language">🇬🇧 EN ▾</summary>
+  <div class="lang-dropdown">
+    <a href="?lang=en" class="lang-option active">🇬🇧 EN</a><a href="?lang=de" class="lang-option ">🇩🇪 DE</a><a href="?lang=dk" class="lang-option ">🇩🇰 DA</a><a href="?lang=nl" class="lang-option ">🇳🇱 NL</a><a href="?lang=fr" class="lang-option ">🇫🇷 FR</a><a href="?lang=se" class="lang-option ">🇸🇪 SV</a>
+  </div>
+</details>
+<a href="/auth/login" class="nav-link">Login</a><a href="/events/submit" class="nav-cta">+ List Free</a>
+    </div>
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu">☰</label>
+  </div>
+  <div class="mobile-menu">
+    <a href="#">🎪 Events</a>
+    <a href="#">🏪 Vendors</a>
+    <a href="#">🎨 Artists</a>
+    <a href="#">📰 Articles</a>
+    <a href="#">+ List Event Free</a>
+    <a href="#">Become a Vendor — €49/yr</a>
+    <a href="#">Register as Artist — Free</a>
+    <a href="#">Login</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══════════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-gradient"></div>
+  <div class="hero-inner">
+
+    <div class="hero-left">
+      <div class="hero-tag"><span class="hero-dot"></span> The Live Events Marketplace</div>
+      <h1 class="hero-h1">
+        Find Events.<br/>
+        Book <em>Vendors.</em><br/>
+        Hire Artists.
+      </h1>
+      <p class="hero-p">
+        The professional platform where event organisers, vendors and artists connect directly.
+        1788+ events across 30 countries.
+      </p>
+      <div class="hero-actions">
+        <div class="hero-primary-btns">
+          <a href="#" class="hero-btn hbtn-flame">🎪 List Your Event — Free</a>
+          <a href="#" class="hero-btn hbtn-sage">🏪 Register as Vendor — €49/yr</a>
+          <a href="#" class="hero-btn hbtn-purple">🎨 Register as Artist — Free</a>
+        </div>
+        <div class="hero-browse">
+          <a href="#" class="hero-browse-link">Browse 1788+ events</a>
+          <span class="hero-browse-sep">·</span>
+          <a href="#" class="hero-browse-link">Find vendors</a>
+          <span class="hero-browse-sep">·</span>
+          <a href="#" class="hero-browse-link">Discover artists</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hstat">
+        <div class="hstat-n">1788<span>+</span></div>
+        <div class="hstat-l">Events Listed</div>
+        <div class="hstat-sub">Festivals · Markets · Concerts</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-n">30<span>+</span></div>
+        <div class="hstat-l">Countries</div>
+        <div class="hstat-sub">Europe · Americas · Asia</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-n">22<span>+</span></div>
+        <div class="hstat-l">Active Vendors</div>
+        <div class="hstat-sub">Food · Crafts · Services</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-n">507<span>+</span></div>
+        <div class="hstat-l">Subscribers</div>
+        <div class="hstat-sub">Industry professionals</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ TRUST BAR ══════════════════════════════════════════════════════════ -->
+<div class="trust">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-check">✓</span>Free Event Listings</div><div class="trust-item"><span class="trust-check">✓</span>Verified Vendors</div><div class="trust-item"><span class="trust-check">✓</span>Gold Badge Artists</div><div class="trust-item"><span class="trust-check">✓</span>30 Countries</div><div class="trust-item"><span class="trust-check">✓</span>Stripe Secure Payments</div><div class="trust-item"><span class="trust-check">✓</span>Direct Applications</div><div class="trust-item"><span class="trust-check">✓</span>No Agency Fees</div>
+  </div>
+</div>
+
+<!-- ═══ WANTED POSTINGS ════════════════════════════════════════════════════ -->
+<section class="wanted">
+  <div class="wanted-inner">
+    <div class="wanted-header">
+      <div class="wanted-title-wrap">
+        <div class="section-eyebrow ey-flame">🔥 Vendor &amp; Artist Spots Available</div>
+        <h2 class="section-h">Events Looking for You</h2>
+        <p class="section-sub">These events have open spots for vendors and artists. Apply directly — no middleman.</p>
+      </div>
+      <a href="#" class="section-link">View all open spots →</a>
+    </div>
+
+    <div class="wanted-grid">
+      <a href="#" class="wcard">
+          <div class="wcard-img">
+            <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200&q=80" alt="Cherry Blossom Festival Tokyo 2026" loading="lazy"/>
+            <div class="wcard-overlay"></div>
+            <div class="wcard-cat">🎪 festival</div>
+            <div class="wcard-spots">200 spots open</div>
+          </div>
+          <div class="wcard-body">
+            <div class="wcard-title">Cherry Blossom Festival Tokyo 2026</div>
+            <div class="wcard-meta">📍 🇯🇵 Tokyo, Japan</div>
+            <div class="wcard-footer">
+              <span class="wcard-date">📅 Late Mar – Mid Apr 2026</span>
+              <span class="wcard-apply">Apply now →</span>
+            </div>
+          </div>
+        </a><a href="#" class="wcard">
+          <div class="wcard-img">
+            <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1200&q=80" alt="Holi Festival India 2026" loading="lazy"/>
+            <div class="wcard-overlay"></div>
+            <div class="wcard-cat">🎪 festival</div>
+            <div class="wcard-spots">300 spots open</div>
+          </div>
+          <div class="wcard-body">
+            <div class="wcard-title">Holi Festival India 2026</div>
+            <div class="wcard-meta">📍 🇮🇳 Vrindavan, India</div>
+            <div class="wcard-footer">
+              <span class="wcard-date">📅 Mar 3–4, 2026</span>
+              <span class="wcard-apply">Apply now →</span>
+            </div>
+          </div>
+        </a><a href="#" class="wcard">
+          <div class="wcard-img">
+            <img src="https://images.unsplash.com/photo-1504680177321-2e6a879aac86?w=1200&q=80" alt="Nebuta Matsuri Festival Aomori 2026" loading="lazy"/>
+            <div class="wcard-overlay"></div>
+            <div class="wcard-cat">🎪 festival</div>
+            <div class="wcard-spots">400 spots open</div>
+          </div>
+          <div class="wcard-body">
+            <div class="wcard-title">Nebuta Matsuri Festival Aomori 2026</div>
+            <div class="wcard-meta">📍 🇯🇵 Aomori, Japan</div>
+            <div class="wcard-footer">
+              <span class="wcard-date">📅 Aug 2–7, 2026</span>
+              <span class="wcard-apply">Apply now →</span>
+            </div>
+          </div>
+        </a><a href="#" class="wcard">
+          <div class="wcard-img">
+            <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=80" alt="Dubai Shopping Festival 2026" loading="lazy"/>
+            <div class="wcard-overlay"></div>
+            <div class="wcard-cat">🎪 city</div>
+            <div class="wcard-spots">500 spots open</div>
+          </div>
+          <div class="wcard-body">
+            <div class="wcard-title">Dubai Shopping Festival 2026</div>
+            <div class="wcard-meta">📍 🇦🇪 Dubai, UAE</div>
+            <div class="wcard-footer">
+              <span class="wcard-date">📅 Jan 8 – Feb 8, 2026</span>
+              <span class="wcard-apply">Apply now →</span>
+            </div>
+          </div>
+        </a><a href="#" class="wcard">
+          <div class="wcard-img">
+            <img src="https://images.unsplash.com/photo-1563841930606-67e2bce48b78?w=1200&q=80" alt="Sapporo Snow Festival Japan 2026" loading="lazy"/>
+            <div class="wcard-overlay"></div>
+            <div class="wcard-cat">🎪 festival</div>
+            <div class="wcard-spots">200 spots open</div>
+          </div>
+          <div class="wcard-body">
+            <div class="wcard-title">Sapporo Snow Festival Japan 2026</div>
+            <div class="wcard-meta">📍 🇯🇵 Sapporo, Japan</div>
+            <div class="wcard-footer">
+              <span class="wcard-date">📅 Feb 5–11, 2026</span>
+              <span class="wcard-apply">Apply now →</span>
+            </div>
+          </div>
+        </a><a href="#" class="wcard">
+          <div class="wcard-img">
+            <img src="https://images.unsplash.com/photo-1506377872008-6645d9d29ef7?w=1200&q=80" alt="Portland Rose Festival 2026" loading="lazy"/>
+            <div class="wcard-overlay"></div>
+            <div class="wcard-cat">🎪 city</div>
+            <div class="wcard-spots">200 spots open</div>
+          </div>
+          <div class="wcard-body">
+            <div class="wcard-title">Portland Rose Festival 2026</div>
+            <div class="wcard-meta">📍 🇺🇸 Portland, USA</div>
+            <div class="wcard-footer">
+              <span class="wcard-date">📅 May 22 – Jun 7, 2026</span>
+              <span class="wcard-apply">Apply now →</span>
+            </div>
+          </div>
+        </a>
+    </div>
+
+    <div class="wanted-cta">
+      <p><strong>Are you an event organiser?</strong> List your event and specify how many vendor and artist spots you have available. Vendors and artists will apply directly to you.</p>
+      <div class="wanted-cta-btns">
+        <a href="/events/submit" class="hero-btn hbtn-flame">🎪 List Your Event — Free</a>
+        <a href="/vendors" class="hero-btn hbtn-outline">Browse All Vendors →</a>
+        <a href="/artists" class="hero-btn hbtn-outline">Browse All Artists →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EVENTS ════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--warm);">
+  <div class="section-inner">
+    <div class="sec-top">
+      <div>
+        <div class="section-eyebrow ey-flame">🎪 Discover Events</div>
+        <h2 class="section-h dark">Events You Cannot Miss</h2>
+        <p class="section-sub dark">The world's finest festivals, markets and concerts — all in one place</p>
+      </div>
+      <a href="#" class="section-link">View all 1788+ events →</a>
+    </div>
+    <div class="events-grid">
+      <a href="#" class="ecard">
+  <div class="ecard-img"><img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=1200&q=80" alt="Rio Carnival 2026" loading="lazy"/>
+    <div class="ecard-overlay"></div>
+    <div class="ecard-badges">
+      <span class="ebadge ebadge-feat">★ Featured</span>
+      <span class="ebadge ebadge-cat">🎪 festival</span>
+      
+    </div>
+  </div>
+  <div class="ecard-body">
+    <div class="ecard-date">13–21 February 2026</div>
+    <h3 class="ecard-title">Rio Carnival 2026</h3>
+    <div class="ecard-loc">📍 Rio de Janeiro, USA 🇺🇸</div>
+    <div class="ecard-footer">
+      <span class="ecard-att">👥 6,000,000</span>
+      <span class="ecard-cta">View event →</span>
+    </div>
+  </div>
+</a><a href="#" class="ecard">
+  <div class="ecard-img"><img src="https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=1200&q=80" alt="Oktoberfest 2026 Munich" loading="lazy"/>
+    <div class="ecard-overlay"></div>
+    <div class="ecard-badges">
+      <span class="ebadge ebadge-feat">★ Featured</span>
+      <span class="ebadge ebadge-cat">🎪 festival</span>
+      
+    </div>
+  </div>
+  <div class="ecard-body">
+    <div class="ecard-date">19 September – 4 October 2026</div>
+    <h3 class="ecard-title">Oktoberfest 2026 Munich</h3>
+    <div class="ecard-loc">📍 Munich, Germany 🇩🇪</div>
+    <div class="ecard-footer">
+      <span class="ecard-att">👥 6,000,000</span>
+      <span class="ecard-cta">View event →</span>
+    </div>
+  </div>
+</a><a href="#" class="ecard">
+  <div class="ecard-img"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200&q=80" alt="Cherry Blossom Festival Tokyo 2026" loading="lazy"/>
+    <div class="ecard-overlay"></div>
+    <div class="ecard-badges">
+      <span class="ebadge ebadge-feat">★ Featured</span>
+      <span class="ebadge ebadge-cat">🎪 festival</span>
+      
+    </div>
+  </div>
+  <div class="ecard-body">
+    <div class="ecard-date">Late Mar – Mid Apr 2026</div>
+    <h3 class="ecard-title">Cherry Blossom Festival Tokyo 2026</h3>
+    <div class="ecard-loc">📍 Tokyo, Japan 🇯🇵</div>
+    <div class="ecard-footer">
+      <span class="ecard-att">👥 5,000,000</span>
+      <span class="ecard-cta">View event →</span>
+    </div>
+  </div>
+</a><a href="#" class="ecard">
+  <div class="ecard-img"><img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1200&q=80" alt="Holi Festival India 2026" loading="lazy"/>
+    <div class="ecard-overlay"></div>
+    <div class="ecard-badges">
+      <span class="ebadge ebadge-feat">★ Featured</span>
+      <span class="ebadge ebadge-cat">🎪 festival</span>
+      <span class="ebadge ebadge-free">Free</span>
+    </div>
+  </div>
+  <div class="ecard-body">
+    <div class="ecard-date">Mar 3–4, 2026</div>
+    <h3 class="ecard-title">Holi Festival India 2026</h3>
+    <div class="ecard-loc">📍 Vrindavan, India 🇮🇳</div>
+    <div class="ecard-footer">
+      <span class="ecard-att">👥 5,000,000</span>
+      <span class="ecard-cta">View event →</span>
+    </div>
+  </div>
+</a><a href="#" class="ecard">
+  <div class="ecard-img"><img src="https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=1200&q=80" alt="Christmas Market Strasbourg 2026" loading="lazy"/>
+    <div class="ecard-overlay"></div>
+    <div class="ecard-badges">
+      <span class="ebadge ebadge-feat">★ Featured</span>
+      <span class="ebadge ebadge-cat">🎄 christmas</span>
+      
+    </div>
+  </div>
+  <div class="ecard-body">
+    <div class="ecard-date">27 November – 27 December 2026</div>
+    <h3 class="ecard-title">Christmas Market Strasbourg 2026</h3>
+    <div class="ecard-loc">📍 Strasbourg, France 🇫🇷</div>
+    <div class="ecard-footer">
+      <span class="ecard-att">👥 3,000,000</span>
+      <span class="ecard-cta">View event →</span>
+    </div>
+  </div>
+</a><a href="#" class="ecard">
+  <div class="ecard-img"><img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=1200&q=80" alt="Edinburgh Festival Fringe 2026" loading="lazy"/>
+    <div class="ecard-overlay"></div>
+    <div class="ecard-badges">
+      <span class="ebadge ebadge-feat">★ Featured</span>
+      <span class="ebadge ebadge-cat">🎪 festival</span>
+      
+    </div>
+  </div>
+  <div class="ecard-body">
+    <div class="ecard-date">7–31 August 2026</div>
+    <h3 class="ecard-title">Edinburgh Festival Fringe 2026</h3>
+    <div class="ecard-loc">📍 Edinburgh, United Kingdom 🇬🇧</div>
+    <div class="ecard-footer">
+      <span class="ecard-att">👥 3,000,000</span>
+      <span class="ecard-cta">View event →</span>
+    </div>
+  </div>
+</a>
+    </div>
+    <div style="text-align:center;margin-top:28px;">
+      <a href="#" style="display:inline-flex;align-items:center;gap:8px;background:var(--flame);color:#fff;padding:14px 40px;border-radius:10px;font-size:15px;font-weight:700;box-shadow:0 6px 24px rgba(232,71,10,.3);">Browse All 1788+ Events →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ARTISTS ═══════════════════════════════════════════════════════════ -->
+<section class="artists-dark">
+  <div class="section-inner">
+    <div class="sec-top">
+      <div>
+        <div class="section-eyebrow ey-purple">🎨 Verified Artists &amp; Performers</div>
+        <h2 class="section-h">Talent Ready to Be Booked</h2>
+        <p class="section-sub">Musicians · DJs · Comedians · Painters · Dancers · Photographers · Circus · Hosts</p>
+      </div>
+      <a href="#" class="section-link purple">Meet all artists →</a>
+    </div>
+    <div class="artists-grid">
+      <a href="#" class="acard">
+          <div class="acard-img">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80" alt="Mikael Lindgren" loading="lazy"/>
+            <div class="acard-badge">
+              <span class="badge-verified">✅ Verified</span>
+            </div>
+          </div>
+          <div class="acard-body">
+            <div class="acard-genre">Magician / Illusionist</div>
+            <div class="acard-name">Mikael Lindgren</div>
+            <div class="acard-loc">📍 Stockholm, Sweden</div>
+            <div class="acard-footer">
+              <span class="acard-fee">SEK 8,000–25,000</span>
+              <span class="acard-cta">View profile →</span>
+            </div>
+          </div>
+        </a><a href="#" class="acard">
+          <div class="acard-img">
+            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80" alt="Priya Sharma Dance Academy" loading="lazy"/>
+            <div class="acard-badge">
+              <span class="badge-verified">✅ Verified</span>
+            </div>
+          </div>
+          <div class="acard-body">
+            <div class="acard-genre">Dance Act</div>
+            <div class="acard-name">Priya Sharma Dance Academy</div>
+            <div class="acard-loc">📍 London, United Kingdom</div>
+            <div class="acard-footer">
+              <span class="acard-fee">£800–£2,500</span>
+              <span class="acard-cta">View profile →</span>
+            </div>
+          </div>
+        </a><a href="#" class="acard">
+          <div class="acard-img">
+            <img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=600&q=80" alt="The Glasgow Pipers" loading="lazy"/>
+            <div class="acard-badge">
+              <span class="badge-verified">✅ Verified</span>
+            </div>
+          </div>
+          <div class="acard-body">
+            <div class="acard-genre">Live Band</div>
+            <div class="acard-name">The Glasgow Pipers</div>
+            <div class="acard-loc">📍 Glasgow, United Kingdom</div>
+            <div class="acard-footer">
+              <span class="acard-fee">£600–£2,000</span>
+              <span class="acard-cta">View profile →</span>
+            </div>
+          </div>
+        </a><a href="#" class="acard">
+          <div class="acard-img">
+            <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=600&q=80" alt="Yusuf Al-Rashid" loading="lazy"/>
+            <div class="acard-badge">
+              <span class="badge-verified">✅ Verified</span>
+            </div>
+          </div>
+          <div class="acard-body">
+            <div class="acard-genre">Musician / Solo Artist</div>
+            <div class="acard-name">Yusuf Al-Rashid</div>
+            <div class="acard-loc">📍 Amsterdam, Netherlands</div>
+            <div class="acard-footer">
+              <span class="acard-fee">€500–€1,500</span>
+              <span class="acard-cta">View profile →</span>
+            </div>
+          </div>
+        </a><a href="#" class="acard">
+          <div class="acard-img">
+            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80" alt="Flamenco Puro Barcelona" loading="lazy"/>
+            <div class="acard-badge">
+              <span class="badge-verified">✅ Verified</span>
+            </div>
+          </div>
+          <div class="acard-body">
+            <div class="acard-genre">Dance Act</div>
+            <div class="acard-name">Flamenco Puro Barcelona</div>
+            <div class="acard-loc">📍 Barcelona, Spain</div>
+            <div class="acard-footer">
+              <span class="acard-fee">€1,200–€3,500</span>
+              <span class="acard-cta">View profile →</span>
+            </div>
+          </div>
+        </a><a href="#" class="acard">
+          <div class="acard-img">
+            <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=600&q=80" alt="Mia Hartmann" loading="lazy"/>
+            <div class="acard-badge">
+              <span class="badge-verified">✅ Verified</span>
+            </div>
+          </div>
+          <div class="acard-body">
+            <div class="acard-genre">Street Artist / Muralist</div>
+            <div class="acard-name">Mia Hartmann</div>
+            <div class="acard-loc">📍 Berlin, Germany</div>
+            <div class="acard-footer">
+              <span class="acard-fee">€800–€4,000</span>
+              <span class="acard-cta">View profile →</span>
+            </div>
+          </div>
+        </a><a href="#" class="acard">
+          <div class="acard-img">
+            <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&q=80" alt="Ingrid Bakke" loading="lazy"/>
+            <div class="acard-badge">
+              <span class="badge-verified">✅ Verified</span>
+            </div>
+          </div>
+          <div class="acard-body">
+            <div class="acard-genre">Musician / Solo Artist</div>
+            <div class="acard-name">Ingrid Bakke</div>
+            <div class="acard-loc">📍 Oslo, Norway</div>
+            <div class="acard-footer">
+              <span class="acard-fee">NOK 8,000–25,000</span>
+              <span class="acard-cta">View profile →</span>
+            </div>
+          </div>
+        </a><a href="#" class="acard">
+          <div class="acard-img">
+            <img src="https://images.unsplash.com/photo-1571266028243-3716f02d2d2e?w=600&q=80" alt="DJ Kofi Mensah" loading="lazy"/>
+            <div class="acard-badge">
+              <span class="badge-verified">✅ Verified</span>
+            </div>
+          </div>
+          <div class="acard-body">
+            <div class="acard-genre">DJ / Electronic</div>
+            <div class="acard-name">DJ Kofi Mensah</div>
+            <div class="acard-loc">📍 Amsterdam, Netherlands</div>
+            <div class="acard-footer">
+              <span class="acard-fee">€600–€1,800</span>
+              <span class="acard-cta">View profile →</span>
+            </div>
+          </div>
+        </a>
+    </div>
+    <div class="artists-cta-row">
+      <a href="#" class="hero-btn hbtn-purple">🔍 Browse All Artists</a>
+      <a href="#" class="hero-btn hbtn-outline">🎨 Register as Artist — Free</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VENDORS ════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:#fff;">
+  <div class="section-inner">
+    <div class="sec-top">
+      <div>
+        <div class="section-eyebrow ey-sage">🏪 Verified Vendors</div>
+        <h2 class="section-h dark">Trusted Event Suppliers</h2>
+        <p class="section-sub dark">Food trucks · Artisan crafts · Entertainment · Photography · Catering · Market stalls</p>
+      </div>
+      <a href="#" class="section-link sage">View all vendors →</a>
+    </div>
+    <div class="vendors-grid">
+      <a href="#" class="vcard">
+          <div class="vcard-img">
+            <img src="https://www.bhatti-catering.de/s/cc_images/teaserbox_18623066.jpg?t=1696433312" alt="Bhatti Catering — Asia Street Food Kitchen" loading="lazy"/>
+            <div class="vcard-badge-pos"><span class="badge-verified">✅ Verified</span></div>
+          </div>
+          <div class="vcard-body">
+            <div class="vcard-cat">Food & Drinks</div>
+            <div class="vcard-name">Bhatti Catering — Asia Street Food Kitchen</div>
+            <div class="vcard-loc">📍 Hamburg, Germany</div>
+            <div class="vcard-footer">
+              <span class="vcard-apps">New vendor</span>
+              <span class="vcard-cta">View profile →</span>
+            </div>
+          </div>
+        </a><a href="#" class="vcard">
+          <div class="vcard-img">
+            <div class="vcard-placeholder">🏪</div>
+            <div class="vcard-badge-pos"><span class="badge-verified">✅ Verified</span></div>
+          </div>
+          <div class="vcard-body">
+            <div class="vcard-cat">Food & Drinks</div>
+            <div class="vcard-name">Charlies Lemonadbryggeri AB</div>
+            <div class="vcard-loc">📍 Örebro, Sweden</div>
+            <div class="vcard-footer">
+              <span class="vcard-apps">New vendor</span>
+              <span class="vcard-cta">View profile →</span>
+            </div>
+          </div>
+        </a><a href="#" class="vcard">
+          <div class="vcard-img">
+            <img src="https://res.cloudinary.com/dexnecwkq/image/upload/v1775092590/festmore/vendor/vendor_21_1775092589273.jpg" alt="Totó Vino e Cucina" loading="lazy"/>
+            <div class="vcard-badge-pos"><span class="badge-verified">✅ Verified</span></div>
+          </div>
+          <div class="vcard-body">
+            <div class="vcard-cat">Food & Drinks</div>
+            <div class="vcard-name">Totó Vino e Cucina</div>
+            <div class="vcard-loc">📍 Haarlem, Netherlands</div>
+            <div class="vcard-footer">
+              <span class="vcard-apps">New vendor</span>
+              <span class="vcard-cta">View profile →</span>
+            </div>
+          </div>
+        </a><a href="#" class="vcard">
+          <div class="vcard-img">
+            <img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400&q=75" alt="The Cheese Wanderer" loading="lazy"/>
+            <div class="vcard-badge-pos"><span class="badge-verified">✅ Verified</span></div>
+          </div>
+          <div class="vcard-body">
+            <div class="vcard-cat">Food & Drinks</div>
+            <div class="vcard-name">The Cheese Wanderer</div>
+            <div class="vcard-loc">📍 Bruges, Belgium</div>
+            <div class="vcard-footer">
+              <span class="vcard-apps">New vendor</span>
+              <span class="vcard-cta">View profile →</span>
+            </div>
+          </div>
+        </a><a href="#" class="vcard">
+          <div class="vcard-img">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&q=75" alt="EventTech Solutions" loading="lazy"/>
+            <div class="vcard-badge-pos"><span class="badge-verified">✅ Verified</span></div>
+          </div>
+          <div class="vcard-body">
+            <div class="vcard-cat">Technology</div>
+            <div class="vcard-name">EventTech Solutions</div>
+            <div class="vcard-loc">📍 Amsterdam, Netherlands</div>
+            <div class="vcard-footer">
+              <span class="vcard-apps">New vendor</span>
+              <span class="vcard-cta">View profile →</span>
+            </div>
+          </div>
+        </a><a href="#" class="vcard">
+          <div class="vcard-img">
+            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&q=75" alt="Vintage Valhalla" loading="lazy"/>
+            <div class="vcard-badge-pos"><span class="badge-verified">✅ Verified</span></div>
+          </div>
+          <div class="vcard-body">
+            <div class="vcard-cat">Fashion & Apparel</div>
+            <div class="vcard-name">Vintage Valhalla</div>
+            <div class="vcard-loc">📍 Stockholm, Sweden</div>
+            <div class="vcard-footer">
+              <span class="vcard-apps">New vendor</span>
+              <span class="vcard-cta">View profile →</span>
+            </div>
+          </div>
+        </a>
+    </div>
+    <div style="text-align:center;margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="#" style="display:inline-flex;align-items:center;gap:8px;background:var(--sage);color:#fff;padding:14px 32px;border-radius:10px;font-size:14px;font-weight:700;box-shadow:0 6px 24px rgba(74,112,96,.25);">🏪 Become a Verified Vendor</a>
+      <a href="#" style="display:inline-flex;align-items:center;gap:8px;background:var(--warm);color:var(--sage);border:2px solid var(--sage);padding:14px 32px;border-radius:10px;font-size:14px;font-weight:700;">Browse All Vendors →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ══════════════════════════════════════════════════════ -->
+<section class="section how-bg">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:8px;">
+      <div class="section-eyebrow ey-neutral" style="margin:0 auto 12px;">How Festmore Works</div>
+      <h2 class="section-h dark" style="text-align:center;">Three Paths. One Platform.</h2>
+      <p class="section-sub dark" style="text-align:center;margin:8px auto 0;max-width:480px;">Whether you organise events, sell at them or perform at them — Festmore connects you directly.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-card" style="border-top:3px solid var(--flame);">
+        <div class="how-num how-num-flame">1</div>
+        <span class="how-icon">🎪</span>
+        <div class="how-label" style="color:var(--flame);">For Organisers</div>
+        <div class="how-title">List your event, find vendors &amp; artists</div>
+        <div class="how-desc">Post your event free. Specify how many vendor spots and artist slots you need. Qualified applicants come to you — reviewed, compared and booked directly.</div>
+        <a href="#" style="display:inline-block;margin-top:16px;color:var(--flame);font-size:13px;font-weight:700;">List event free →</a>
+      </div>
+      <div class="how-card" style="border-top:3px solid var(--sage);">
+        <div class="how-num how-num-sage">2</div>
+        <span class="how-icon">🏪</span>
+        <div class="how-label" style="color:var(--sage);">For Vendors</div>
+        <div class="how-title">Get discovered. Apply to events. Grow your business.</div>
+        <div class="how-desc">Create your verified vendor profile. Browse events with open spots. Apply directly to the ones that fit you — no agency, no commission, no middleman.</div>
+        <a href="#" style="display:inline-block;margin-top:16px;color:var(--sage);font-size:13px;font-weight:700;">Register as vendor →</a>
+      </div>
+      <div class="how-card" style="border-top:3px solid var(--purple);">
+        <div class="how-num how-num-purple">3</div>
+        <span class="how-icon">🎨</span>
+        <div class="how-label" style="color:var(--purple);">For Artists</div>
+        <div class="how-title">Showcase your talent. Get booked.</div>
+        <div class="how-desc">Free artist profile with your photos, videos, genre and pricing. Organisers search and contact you directly. Musicians, DJs, comedians, painters, dancers and more.</div>
+        <a href="#" style="display:inline-block;margin-top:16px;color:var(--purple);font-size:13px;font-weight:700;">Register free →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICING ═══════════════════════════════════════════════════════════ -->
+<section class="section pricing-bg">
+  <div class="section-inner">
+    <div style="text-align:center;">
+      <div class="section-eyebrow ey-gold" style="margin:0 auto 12px;">Transparent Pricing</div>
+      <h2 class="section-h" style="text-align:center;">Simple. Fair. No Hidden Fees.</h2>
+      <p class="section-sub" style="text-align:center;margin:8px auto 0;">Start free. Upgrade when the value is clear. One booking pays for years.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pcard pcard-free">
+        <div class="pcard-tier">Free</div>
+        <div class="pcard-price">€0</div>
+        <div class="pcard-period">Forever free</div>
+        <div class="pcard-feature"><span class="pcard-fi">○</span>Basic artist or event profile</div><div class="pcard-feature"><span class="pcard-fi">○</span>Appear in search results</div><div class="pcard-feature"><span class="pcard-fi">○</span>Browse all events</div><div class="pcard-feature"><span class="pcard-fi">○</span>Contact via Festmore form</div>
+        <a href="#" class="pcard-cta">Get Started Free</a>
+      </div>
+      <div class="pcard pcard-standard">
+        <div class="pcard-glow pcard-glow-sage"></div>
+        <div class="pcard-pop pcard-pop-sage">Best Value</div>
+        <div class="pcard-tier">Verified Vendor</div>
+        <div class="pcard-price">€49</div>
+        <div class="pcard-period">/year · less than €5/month</div>
+        <div class="pcard-feature"><span class="pcard-fi" style="color:var(--sage);">✅</span>✅ Verified badge on profile</div><div class="pcard-feature"><span class="pcard-fi" style="color:var(--sage);">✅</span>Full profile with photos &amp; bio</div><div class="pcard-feature"><span class="pcard-fi" style="color:var(--sage);">✅</span>Your website &amp; contact visible</div><div class="pcard-feature"><span class="pcard-fi" style="color:var(--sage);">✅</span>Apply directly to events</div><div class="pcard-feature"><span class="pcard-fi" style="color:var(--sage);">✅</span>Priority in vendor search</div><div class="pcard-feature"><span class="pcard-fi" style="color:var(--sage);">✅</span>Weekly newsletter inclusion</div>
+        <a href="#" class="pcard-cta">Get Verified — €49/yr</a>
+      </div>
+      <div class="pcard pcard-gold">
+        <div class="pcard-glow pcard-glow-gold"></div>
+        <div class="pcard-pop pcard-pop-gold">Maximum Visibility</div>
+        <div class="pcard-tier">Gold Vendor or Artist</div>
+        <div class="pcard-price">€99</div>
+        <div class="pcard-period">/year · less than €9/month</div>
+        <div class="pcard-feature"><span class="pcard-fi" style="color:var(--gold);">🥇</span>🥇 Gold badge — stands out instantly</div><div class="pcard-feature"><span class="pcard-fi" style="color:var(--gold);">🥇</span>Featured on homepage</div><div class="pcard-feature"><span class="pcard-fi" style="color:var(--gold);">🥇</span>Top of search results</div><div class="pcard-feature"><span class="pcard-fi" style="color:var(--gold);">🥇</span>Dedicated profile page</div><div class="pcard-feature"><span class="pcard-fi" style="color:var(--gold);">🥇</span>Direct contact button</div><div class="pcard-feature"><span class="pcard-fi" style="color:var(--gold);">🥇</span>Analytics dashboard</div><div class="pcard-feature"><span class="pcard-fi" style="color:var(--gold);">🥇</span>All Verified features</div>
+        <a href="#" class="pcard-cta">Get Gold — €99/yr</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ARTICLES ══════════════════════════════════════════════════════════ -->
+
+<section class="section" style="background:var(--warm);">
+  <div class="section-inner">
+    <div class="sec-top">
+      <div>
+        <div class="section-eyebrow ey-neutral">📰 Guides &amp; Insights</div>
+        <h2 class="section-h dark">For Vendors, Artists &amp; Organisers</h2>
+      </div>
+      <a href="#" class="section-link">Read all 100+ articles →</a>
+    </div>
+    <div class="articles-grid">
+      <a href="#" class="artcard">
+          <div class="artcard-img"><img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1200&q=80" alt="Top Trade Fairs in Germany 2026" loading="lazy"/>
+            <span class="artcard-catbadge" style="background:var(--flame);">Festivals</span></div>
+          <div class="artcard-body">
+            <h3 class="artcard-title">Top Trade Fairs in Germany 2026</h3>
+            <p class="artcard-excerpt">Complete guide to top trade fairs in germany 2026. Find the best events, festivals and markets with …</p>
+            <div class="artcard-footer"><span class="artcard-date">3 Jun 2026</span><span class="artcard-cta">Read →</span></div>
+          </div>
+        </a><a href="#" class="artcard">
+          <div class="artcard-img"><img src="https://images.unsplash.com/photo-1558402847-7f9d6d65b41c?w=1200&q=80" alt="How to Price Your Products at Markets and Festivals" loading="lazy"/>
+            <span class="artcard-catbadge" style="background:var(--flame);">Vendor Guide</span></div>
+          <div class="artcard-body">
+            <h3 class="artcard-title">How to Price Your Products at Markets and Festivals</h3>
+            <p class="artcard-excerpt">Complete guide to how to price your products at markets and festivals. Find the best events, festiva…</p>
+            <div class="artcard-footer"><span class="artcard-date">3 Jun 2026</span><span class="artcard-cta">Read →</span></div>
+          </div>
+        </a><a href="#" class="artcard">
+          <div class="artcard-img"><img src="https://images.unsplash.com/photo-1558402847-7f9d6d65b41c?w=1200&q=80" alt="Market Vendor Insurance: What You Need to Know" loading="lazy"/>
+            <span class="artcard-catbadge" style="background:var(--flame);">Vendor Guide</span></div>
+          <div class="artcard-body">
+            <h3 class="artcard-title">Market Vendor Insurance: What You Need to Know</h3>
+            <p class="artcard-excerpt">Complete guide to market vendor insurance: what you need to know. Find the best events, festivals an…</p>
+            <div class="artcard-footer"><span class="artcard-date">3 Jun 2026</span><span class="artcard-cta">Read →</span></div>
+          </div>
+        </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COUNTRIES ══════════════════════════════════════════════════════════ -->
+<section class="section" style="background:#fff;">
+  <div class="section-inner">
+    <div class="sec-top">
+      <div>
+        <div class="section-eyebrow ey-neutral">🌍 30 Countries</div>
+        <h2 class="section-h dark">Events Everywhere</h2>
+      </div>
+    </div>
+    <div class="countries-grid">
+      <a href="#" class="ccard"><span class="ccard-flag">🇸🇪</span><span class="ccard-name">Sweden</span><span class="ccard-count">604 events</span></a><a href="/events?country=US" class="ccard"><span class="ccard-flag">🇺🇸</span><span class="ccard-name">USA</span><span class="ccard-count">309 events</span></a><a href="/events?country=NL" class="ccard"><span class="ccard-flag">🇳🇱</span><span class="ccard-name">Netherlands</span><span class="ccard-count">165 events</span></a><a href="/events?country=DE" class="ccard"><span class="ccard-flag">🇩🇪</span><span class="ccard-name">Germany</span><span class="ccard-count">137 events</span></a><a href="/events?country=GB" class="ccard"><span class="ccard-flag">🇬🇧</span><span class="ccard-name">United Kingdom</span><span class="ccard-count">111 events</span></a><a href="/events?country=AT" class="ccard"><span class="ccard-flag">🇦🇹</span><span class="ccard-name">Austria</span><span class="ccard-count">46 events</span></a><a href="/events?country=IT" class="ccard"><span class="ccard-flag">🇮🇹</span><span class="ccard-name">Italy</span><span class="ccard-count">44 events</span></a><a href="/events?country=AU" class="ccard"><span class="ccard-flag">🇦🇺</span><span class="ccard-name">Australia</span><span class="ccard-count">38 events</span></a><a href="/events?country=DK" class="ccard"><span class="ccard-flag">🇩🇰</span><span class="ccard-name">Denmark</span><span class="ccard-count">35 events</span></a><a href="/events?country=PT" class="ccard"><span class="ccard-flag">🇵🇹</span><span class="ccard-name">Portugal</span><span class="ccard-count">28 events</span></a><a href="/events?country=FR" class="ccard"><span class="ccard-flag">🇫🇷</span><span class="ccard-name">France</span><span class="ccard-count">28 events</span></a><a href="/events?country=PL" class="ccard"><span class="ccard-flag">🇵🇱</span><span class="ccard-name">Poland</span><span class="ccard-count">26 events</span></a><a href="/events?country=CA" class="ccard"><span class="ccard-flag">🇨🇦</span><span class="ccard-name">Canada</span><span class="ccard-count">25 events</span></a><a href="/events?country=CN" class="ccard"><span class="ccard-flag">🇨🇳</span><span class="ccard-name">China</span><span class="ccard-count">23 events</span></a><a href="/events?country=ES" class="ccard"><span class="ccard-flag">🇪🇸</span><span class="ccard-name">Spain</span><span class="ccard-count">20 events</span></a><a href="/events?country=BE" class="ccard"><span class="ccard-flag">🇧🇪</span><span class="ccard-name">Belgium</span><span class="ccard-count">20 events</span></a><a href="/events?country=NO" class="ccard"><span class="ccard-flag">🇳🇴</span><span class="ccard-name">Norway</span><span class="ccard-count">14 events</span></a><a href="/events?country=EE" class="ccard"><span class="ccard-flag">🇪🇪</span><span class="ccard-name">Estonia</span><span class="ccard-count">13 events</span></a><a href="/events?country=IE" class="ccard"><span class="ccard-flag">🇮🇪</span><span class="ccard-name">Ireland</span><span class="ccard-count">11 events</span></a><a href="/events?country=IN" class="ccard"><span class="ccard-flag">🇮🇳</span><span class="ccard-name">India</span><span class="ccard-count">10 events</span></a><a href="/events?country=FI" class="ccard"><span class="ccard-flag">🇫🇮</span><span class="ccard-name">Finland</span><span class="ccard-count">10 events</span></a><a href="/events?country=JP" class="ccard"><span class="ccard-flag">🇯🇵</span><span class="ccard-name">Japan</span><span class="ccard-count">10 events</span></a><a href="/events?country=HU" class="ccard"><span class="ccard-flag">🇭🇺</span><span class="ccard-name">Hungary</span><span class="ccard-count">8 events</span></a><a href="/events?country=CH" class="ccard"><span class="ccard-flag">🇨🇭</span><span class="ccard-name">Switzerland</span><span class="ccard-count">8 events</span></a><a href="/events?country=HR" class="ccard"><span class="ccard-flag">🇭🇷</span><span class="ccard-name">Croatia</span><span class="ccard-count">7 events</span></a><a href="/events?country=AE" class="ccard"><span class="ccard-flag">🇦🇪</span><span class="ccard-name">UAE</span><span class="ccard-count">6 events</span></a><a href="/events?country=TH" class="ccard"><span class="ccard-flag">🇹🇭</span><span class="ccard-name">Thailand</span><span class="ccard-count">6 events</span></a><a href="/events?country=CZ" class="ccard"><span class="ccard-flag">🇨🇿</span><span class="ccard-name">Czech Republic</span><span class="ccard-count">6 events</span></a><a href="/events?country=GR" class="ccard"><span class="ccard-flag">🇬🇷</span><span class="ccard-name">Greece</span><span class="ccard-count">4 events</span></a><a href="/events?country=BR" class="ccard"><span class="ccard-flag">🇧🇷</span><span class="ccard-name">Brazil</span><span class="ccard-count">3 events</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NEWSLETTER ═════════════════════════════════════════════════════════ -->
+<section class="nl-bg">
+  <div class="nl-box">
+    <div class="nl-left">
+      <h2>Stay Ahead of the Market</h2>
+      <p>New events, vendor opportunities and booking leads — delivered weekly to 507+ industry professionals.</p>
+    </div>
+    <form class="nl-form" >
+      <input type="email" name="email" placeholder="Your email address" required class="nl-input"/>
+      <button type="submit" class="nl-btn">Subscribe Free →</button>
+    </form>
+  </div>
+</section>
+
+<!-- ═══ URGENCY ════════════════════════════════════════════════════════════ -->
+<div class="urgency">
+  <div class="urgency-inner">
+    <div>
+      <h3>Ready to Grow Your Business?</h3>
+      <p>Join 1788+ events · 22+ vendors · 30 countries. Start free, upgrade when you're ready.</p>
+    </div>
+    <div class="urgency-btns">
+      <a href="/events/submit" class="ubtn-w">List Your Event Free</a>
+      <a href="/vendors/register" class="ubtn-t">Become a Vendor</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><strong>Fest</strong>more</div>
+        <p>The professional marketplace connecting event organisers, vendors and artists. 1788+ events across 30 countries worldwide.</p>
+      </div>
+      <div class="footer-col">
+        <h4>For Organisers</h4>
+        <a href="/events/submit">List Event Free</a>
+        <a href="/events/pricing">Event Pricing</a>
+        <a href="/vendors">Find Vendors</a>
+        <a href="/artists">Find Artists</a>
+      </div>
+      <div class="footer-col">
+        <h4>For Vendors &amp; Artists</h4>
+        <a href="/vendors/register">Register as Vendor</a>
+        <a href="/artists/register">Register as Artist</a>
+        <a href="/vendors">Browse Vendors</a>
+        <a href="/artists">Browse Artists</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about">About Festmore</a>
+        <a href="/articles">Articles &amp; Guides</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/privacy">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Festmore.com</span>
+      <span>1788+ Events · 22+ Vendors · 30 Countries</span>
+    </div>
+  </div>
+</footer>
+</body></html>
